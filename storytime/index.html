@@ -2,16 +2,168 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="reset.css">
-    <title>Jia</title>
-</head>
-<body>
-<div class="studio"> <a href="./storytime/index.html">Interaction Studio</a></div>
+    <title>Story Time</title>
+    <style>
+      body {
+        /* transition : all 2.5s cubic-bezier(0.075, 0.82, 0.165, 1); */
+        overflow-x: hidden;
+        background-color: white;
+      }
+
+      section {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        /* border-top: 1px dashed #333; */
+      }
+
+      section.active .image {
+        display : block;
+        /* opacity: 1; */
+      }
+
+      .innerWrap {
+        padding: 150px 0 0  200px;
+        width: 340px;
+        margin-top:50px;
+        z-index: 50;
+      }
+      .image {
+        position: fixed;
+        right: 20%;
+        top: 25%;
+        display: none;
+        width: 600px;
+      }
 
 
-<div class="lab"> <a href="./questionnaire/index.html">Interaction lab</a></div>
-</body>
+      h1 {
+        color: #111;
+        text-align: center;
+        padding-top : 40vh;
+        font-size: 60px;
+      }
+      h2 {
+        color: #111;
+      }
+      p {
+        color : #333;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      .pointWrap {
+        position: fixed;
+        right: 3vw;
+        top: 40%;
+        z-index: 100;
+      }
+
+      .pointWrap li {
+        list-style: none;
+        width: 12px;
+        height: 12px;
+        margin-top: 15px;
+        cursor: pointer;
+        background-color: #666;
+        border-radius: 50%;
+        transition: background .3s ease-out;
+      }
+
+      .pointWrap li.active {
+        background-color: #000;
+      }
+
+    </style>
+    <script>
+      window.onload = function(){
+        var sections = document.getElementsByTagName("section");
+        var pointBtns = document.querySelectorAll('.pointWrap li');
+
+        var pageNum = 0;
+        var totalNum = sections.length;
+
+        for( var i = 0; i < pointBtns.length; i++){
+          (function(idx) {
+            pointBtns[idx].onclick = function(){
+              pageNum = idx;
+              pageChangeFunc();
+
+              window.scrollTo({
+                top: sections[pageNum].offsetTop,
+                behavior: 'smooth',
+              })
+            }
+          })(i);
+        }
+
+        window.addEventListener("scroll", function(event){
+          var scroll = this.scrollY;
+
+          for(var i=0; i<totalNum; i++){
+            if(scroll > sections[i].offsetTop - window.outerHeight/1.5 && scroll < sections[i].offsetTop - window.outerHeight/1.5 +
+            sections[i].offsetHeight){
+              pageNum = i;
+              break;
+            }
+          }
+          pageChangeFunc();
+        });
+
+        function pageChangeFunc(){
+          for(var i=0; i<totalNum; i++){
+            sections[i].classList.remove("active");
+          }
+          sections[pageNum].classList.add("active");
+          pointBtns[pageNum].classList.add("active");
+        }
+        pageChangeFunc();
+      }
+    </script>
+    </head>
+    <body>
+      <ul class="pointWrap">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+
+      <section>
+        <h1>Story Time</h1>
+      </section>
+
+      <section>
+        <div class="innerWrap">
+          <h2>page 1</h2>
+          <p>1</p>
+        </div>
+        <img src="img/1.jpg" class="image" alt="">
+      </section>
+
+      <section>
+        <div class="innerWrap">
+          <h2>page 2</h2>
+          <p>2</p>
+        </div>
+        <img src="img/2.jpg" class="image" alt="">
+      </section>
+
+      <section>
+        <div class="innerWrap">
+          <h2>page 3</h2>
+          <p>3</p>
+        </div>
+        <img src="img/3.jpg" class="image" alt="">
+      </section>
+
+      <section>
+        <div class="innerWrap">
+          <h2>🤨</h2>
+        </div>
+        <img src="img/4.jpg" class="image" alt="">
+      </section>
+    </body>
 </html>

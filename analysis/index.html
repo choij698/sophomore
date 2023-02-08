@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Week 2: Html Structure Analysis</title>
+<!-- Adds: an internal stylesheet. -->
+<style>
+      body {
+            background-color: beige;
+            margin: 50px 100px 50px 100px;
+      }
+
+      header {
+            font-size: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+      }
+
+      section {
+            margin-bottom: 50px;
+      }
+
+      .website {
+            font-size: 20px;
+      }
+      
+
+      .toc {
+            font-size: 25px;
+      }
+
+      a:link {
+            color: gray;
+            text-decoration: none;
+      }
+
+      a:visited {
+            color: gray;
+      }
+
+      #table-of-contents { 
+      margin: 80px 0; 
+      }
+
+      .anchor-offset { 
+      scroll-margin-top: 40px; 
+      }
+
+      .grid-col-2 {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-column-gap: 40px;
+      }
+
+      .preview {
+      padding-top: 30px;
+      width: 1300px;
+      height: 800px;
+      }
+
+      .small-img {
+      display: inline-block;
+      padding: 30px 20px 30px 20px;
+
+      width: 600px;
+      height: 370px;
+      }
+
+      .question_list {
+      color: gray;
+      }
+
+      span {
+      color: purple;
+      }
+
+      .context {
+      font-size: 20px;
+      color: gray;
+      }
+
+</style>
+</head>
+<body>
+<header>
+      Core 2 Interaction: Lab –&nbsp;<em>Week 2: HTML Structure Analysis</em>
+</header>
+<section id="table-of-contents">
+      <h2>Table of Contents</h2>
+<ul class="toc">
+<li><a href="#screenshot">Screenshot ↓</a></li>
+<li><a href="#analysis">Analysis ↓</a></li>
+<li><a href="#questions">Questions ↓</a></li>
+</ul>
+</section>
+<section id="screenshot">
+<h2>Screenshot</h2>
+<!-- TODO: Add image tag with src attribute references your screenshot. -->
+<div><a class="website" href="https://mrdoodleshop.com/">>>>mrdoodleshop<<<</a></div>
+<img class="preview" src="img/3.png" alt="preview">
+<img class="small-img" src="img/1.png" alt="homepage">
+<img class="small-img" src="img/2.png" alt="footer">
+</section> 
+<section id="analysis">
+<h2>Analysis</h2>
+<div class="grid-col-2">
+<div>
+<pre id="analysis--simplified-html" class="context">
+body
+      div .ajaxifyDrawer
+      /div
+
+      div 
+            div 
+                  nav .nav-mobile
+                  /nav
+            /div 
+
+            header .site-header role=banner
+            /header 
+      /div
+
+      div 
+            main .main-content 
+            /main 
+
+            footer .sitefooter role-contentinfo 
+                  hr
+                  hr 
+                  small 
+            /footer 
+      /div
+/body 
+            
+
+
+</pre>
+</div>
+<div id="analysis--text" class="context">
+      Most tags of this website are made up of div tags and there are three main div tags. It is responsive using media queries and can be implemented in all screen sizes, including mobile.
+      <br>
+      @media screen and (max-width:1024px)<br>
+      @media screen and (min-width: 1025px)
+      
+      <br>
+<br>
+      The first div tag is a cart section. When you click a cart on the left page of the homepage, the screen is pushed to the left and a cart about half the size of the screen appears. (.ajaxifyDrawer) When I am on the homepage Css does not seem to have any code to hide the cart, so it seems to have been implemented in JavaScript.
+      <br>
+      <br>
+      The second div tag is header and menu. The location of the navigation bar is different when it is full screen and when it is mobile. It is located on the left side when it is a full screen, but on mobile, you need to press the menu icon (which is .nav-mobile) to open a navigation. On a full screen, the header shares the same tag as the navigation bar, but in the mobile version, the css is different. It is located at the top of the screen.
+      <br>
+      <br>
+      The third div tag is the main homepage and footer. The homepage is made up of a main tag, and the designer used a grid to display four items in a row. Because of the media query, when the width decreases, the display changes to 2 items in a row. The image and product name of each grid element are composed of a tag and p tag. One interesting thing about footer is, instead of margins or padding, the designer used hr tags to create an empty space.
+
+</div>
+</div>
+</section>
+<section id="questions">
+<h2>Questions</h2>
+<ul class="question_list context" >
+<li>
+      Why do people use div tags more instead of semantic elements like header, section, nav etc.
+      </li>
+      <li>What is <span>::before</span> and <span>::after</span>?</li>
+      <li>Can we consider a working code as a good code even though it is hard to read?</li>
+</ul>
+</section>
+</body>
+</html>
