@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Rokkitt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Passion+One:wght@700&family=Rokkitt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+
+body {
+    overflow: hidden;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 10vh;
+    font-size: 35px;
+    gap: 20vw;
+    font-family: 'Abril Fatface';
+}
+
+.bigtext {
+    font-size: 50px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 80vh;
+}
+
+    img {
+        width: 47vw;
+    }
+
+    .text1 {
+        position: absolute;
+        top: 5vh;
+        left: 27vw;
+        color: white;
+
+        font-size: 1.5vw;
+        font-family: 'Vidaloka', serif;
+        }
+
+    .text2 {
+        position: absolute;
+        top: 28vw;
+        left: 50vw;
+        color: white;
+
+        font-size: 2.3vw;
+        font-family: 'Passion One';
+        }
+
+    .truman {
+        position: absolute;
+        background-color: green;
+        padding: 20vh 2vw;
+        opacity: 0;
+
+        top: 32vh;
+        left: 36vw;
+    }
+
+.footer_text {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    height: 5vh;
+    /* margin-top: 10px; */
+    font-size: 18px;
+    gap: 20vw;
+    font-family: 'Abril Fatface';
+}
+
+.hover_img1,
+.hover_img2,
+.hover_img3,
+.hover_img4,
+.hover_img5,
+.hover_img6 {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    /* opacity: 0%; */
+    display: none;
+}
+
+
+/* image hover effect */
+
+.f_left:hover {
+    color: green;
+}
+
+.f_right:hover {
+    color: red;
+}
+
+/* .bigtext:hover {
+
+}
+
+
+.header_right:hover {
+
+
+}
+
+.text1:hover {
+
+
+}
+
+.truman:hover {
+
+
+}
+
+.text2:hover {
+
+
+}
+
+span:hover {
+
+} */
