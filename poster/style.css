@@ -67,7 +67,7 @@ main {
 
     .text1 {
         position: absolute;
-        top: 5vh;
+        top: 30px;
         left: 27vw;
         color: white;
 
@@ -75,10 +75,14 @@ main {
         font-family: 'Vidaloka', serif;
         }
 
+        .text1_2 {
+          font-size: 3vw;
+        }
+
     .text2 {
         position: absolute;
-        top: 28vw;
-        left: 50vw;
+        bottom: 35px;
+        left: 770px;
         color: white;
 
         font-size: 2.3vw;
