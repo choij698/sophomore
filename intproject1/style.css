@@ -9,11 +9,11 @@
 
 body {
   box-sizing: border-box;
-  -ms-overflow-style: none; /* internet explorer */
-  scrollbar-width: none; /* firefox */
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
   font-family: Arial, Helvetica, sans-serif;
-
-  cursor: url("/img/cursor.png"), auto;
+  /* set cursoer image */
+  cursor: s-resize;
 }
 
 a {
@@ -141,6 +141,8 @@ body .section_3 .article_4 .text {
   font-size: 20px;
   padding: 10vh 18vw;
   font-family: "Neuton", serif;
+
+  cursor: default;
 }
 
 .button_1,
@@ -157,8 +159,8 @@ body .section_3 .article_4 .text {
 .button_4:hover {
   background-color: transparent;
   border-color: transparent;
-
-  cursor: zoom-in;
+  /* 호버했을 때 커서 */
+  cursor: help;
 }
 .button_1:focus,
 .button_2:focus,
@@ -166,18 +168,21 @@ body .section_3 .article_4 .text {
 .button_4:focus {
   background-color: transparent;
   border-color: transparent;
-
-  cursor: pointer;
+  /* 클릭했을 때 커서 */
+  /* cursor: wait; */
 }
 
 .article_4_back,
 .article_2_back {
-
+  /* todo: 디자인 */
   position: fixed;
   top: 50%;
-  right: 10px;
+  right: 4vw;
   transform: translate(0, -50%);
   display: none;
+
+  font-size: 20px;
+  cursor: help;
 }
 
 .article_2.active .article_2_back,
@@ -185,11 +190,41 @@ body .section_3 .article_4 .text {
   display: block;
 }
 
+
+
+/* media query */
+
 @media (max-width: 1100px) {
   body .section_1 .text {
+    font-size: 100px;
   }
 
-  body .section_3 .article_1 button,
-  body .section_3 .article_1 a {
+  body .section_3 .article_2 .text,
+body .section_3 .article_4 .text {
+  font-size: 16px;
+}
+
+.article_4_back,
+.article_2_back {
+  font-size: 16px;
+}
+
+
+}
+
+@media (max-width: 500px) {
+  body .section_1 .text {
+    font-size: 70px;
   }
+
+  body .section_3 .article_2 .text,
+body .section_3 .article_4 .text {
+  font-size: 14px;
+}
+
+.article_4_back,
+.article_2_back {
+  font-size: 14px;
+}
+
 }

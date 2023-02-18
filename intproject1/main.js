@@ -1,26 +1,29 @@
+/**
+ * default data
+ */
 const data = {
   section_1: {
     $section_1: document.querySelector(".section_1"),
     text: {
       $text: document.querySelector(".section_1 .text"),
-      startRatio: 0.0, 
-      halfRatio: 0.5, 
-      endRatio: 0.8, 
+      startRatio: 0.0, // 건드려도 됨
+      halfRatio: 0.5, // 건드려도 됨
+      endRatio: 0.8, // 건드려도 됨
     },
-    heightNum: 3, 
+    heightNum: 3, // 건드려도 됨
   },
   section_2: {
     $section_2: document.querySelector(".section_2"),
     text: {
       $text: document.querySelector(".section_2 .text"),
-      startRatio: 0.05, 
-      step_1_ratio: 0.2, 
-      step_2_ratio: 0.3, 
-      step_3_ratio: 0.5, 
-      endRatio: 0.88, 
+      startRatio: 0.05, // 건드려도 됨
+      step_1_ratio: 0.2, // 건드려도 됨
+      step_2_ratio: 0.3, // 건드려도 됨
+      step_3_ratio: 0.5, // 건드려도 됨
+      endRatio: 0.88, // 건드려도 됨 근데 비추
     },
     $circle: document.querySelector(".section_2 .circle"),
-    heightNum: 6, 
+    heightNum: 6, // 건드려도 됨
   },
   section_3: {
     $section_3: document.querySelector(".section_3"),
@@ -29,36 +32,46 @@ const data = {
     $article_4: document.querySelector(".article_4"),
   },
 };
-let 반지름 = 8; 
-let 원의크기 = 4; 
+let 반지름 = 8; // px단위
+let 원의크기 = 4; // %단위
 let 회전속도 = 12000;
 
-
+/**
+ * sum of section_2_hide's width
+ */
 let hide_widths = [];
 const $section_2_hides = document.querySelectorAll(".section_2 .hide");
 for (let $section_2_hide of $section_2_hides) {
   hide_widths.push($section_2_hide.offsetWidth);
 }
 
-
+/**
+ * sum of section_2_show's width
+ */
 let show_width_sum = 0;
 document.querySelectorAll(".section_2 .show").forEach((e) => {
   show_width_sum += e.offsetWidth;
 });
 
-
+/**
+ * set all section height
+ */
 for (let section_n in data) {
   data[section_n][`$${section_n}`].style.height = `${
     data[section_n].heightNum * 100
   }vh`;
 }
 
-
+/**
+ * scroll to bottom
+ */
 const scrollBottom = () => {
   data.section_3.$section_3.scrollIntoView();
 };
 
-
+/**
+ * set section_3 mode
+ */
 let mode = "default";
 let interval;
 let x = 0.5;
@@ -222,9 +235,6 @@ document.querySelector(".article_2_back").addEventListener("click", resetMode);
 document.querySelector(".article_4_back").addEventListener("click", resetMode);
 data.section_2.$circle.addEventListener("click", resetMode);
 
-
-
-
 /**
  * scroll event
  */
@@ -243,10 +253,16 @@ const scrollEvent = () => {
 
     if (startRatio >= ratio) {
       // 글자가 나타나기 전
-
+      // $text.style.opacity = 0;
+      // $text.style.transform = `translateY(0)`;
     } else if (halfRatio >= ratio && ratio > startRatio) {
       // 글자가 나타나는 부분
-
+      // const partialRatio = (
+      //   (ratio - startRatio) /
+      //   (halfRatio - startRatio)
+      // ).toFixed(2);
+      // $text.style.opacity = partialRatio;
+      // $text.style.transform = `translateY(-${partialRatio * 50}%)`;
     } else if (endRatio >= ratio && ratio > halfRatio) {
       // 글자가 사라지는 부분
       const partialRatio = (
@@ -267,7 +283,7 @@ const scrollEvent = () => {
     scrollY <
     (data.section_1.heightNum + data.section_2.heightNum) * innerHeight
   ) {
-
+    // JUNICHIRO TANIZAKI
     const {
       section_2: {
         text: {
@@ -375,6 +391,9 @@ const scrollEvent = () => {
   }
 };
 
+/**
+ * init
+ */
 scrollEvent();
 addEventListener("scroll", scrollEvent);
 addEventListener("resize", () => {

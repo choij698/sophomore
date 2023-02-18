@@ -5,7 +5,7 @@ body {
   height: 100vh;
   width: 100vw;
 
-  cursor: url("/daytime/img/cursor1.png"), auto;
+  cursor: help;
 }
 
 .wrapper_night,
@@ -33,13 +33,14 @@ a {
   align-items: center;
   text-align: center;
 
+  font-family: "Neuton", serif;
   letter-spacing: 2.5px;
   animation: fadeIn 1s ease-in-out;
 }
 
 .text1 {
   font-size: 30px;
-  margin-bottom: 5%;
+  margin-bottom: 1%;
 }
 
 .text2,
@@ -49,7 +50,7 @@ a {
 
 a:link {
   color: black;
-  margin-top: 3%;
+  margin-top: 1%;
   font-style: italic;
 }
 
@@ -74,12 +75,14 @@ a:visited {
 }
 
 .sentence1,
-.sentence2,
-.sentence3 {
-  font-size: 1.5vw;
+.sentence2 {
+  font-size: 20px;
   text-align: center;
   margin-bottom: 1vw;
   animation: fadeIn 1s ease-in-out;
+  font-family: "Neuton", serif;
+  letter-spacing: 2px;
+  
 }
 
 @keyframes fadeIn {
@@ -89,4 +92,24 @@ a:visited {
   100% {
     opacity: 1;
   }
+}
+
+
+/* media query */
+
+@media (max-width: 400px) {
+
+  .sentence1,
+.sentence2 {
+  font-size: 16px;
+}
+  .text1 {
+    font-size: 20px;
+  }
+
+  .text2,
+  a {
+    font-size: 12px;
+  }
+
 }
