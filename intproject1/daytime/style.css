@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Neuton&display=swap");
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+
+  cursor: url("/daytime/img/cursor1.png"), auto;
+}
+
+.wrapper_night,
+.wrapper_daytime {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  /* opacity: 0; */
+
+  font-family: "Neuton", serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text1,
+.text2,
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  letter-spacing: 2.5px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.text1 {
+  font-size: 30px;
+  margin-bottom: 5%;
+}
+
+.text2,
+a {
+  font-size: 18px;
+}
+
+a:link {
+  color: black;
+  margin-top: 3%;
+  font-style: italic;
+}
+
+a:hover {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  bottom: 2vh;
+  left: 50%;
+  transform: translate(-50%, 0);
+  gap: 20vw;
+}
+
+.sentence1,
+.sentence2,
+.sentence3 {
+  font-size: 1.5vw;
+  text-align: center;
+  margin-bottom: 1vw;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
