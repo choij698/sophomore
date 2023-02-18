@@ -6,24 +6,24 @@ const data = {
     $section_1: document.querySelector(".section_1"),
     text: {
       $text: document.querySelector(".section_1 .text"),
-      startRatio: 0.0, // 건드려도 됨
-      halfRatio: 0.5, // 건드려도 됨
-      endRatio: 0.8, // 건드려도 됨
+      startRatio: 0.0, 
+      halfRatio: 0.5, 
+      endRatio: 0.8, 
     },
-    heightNum: 3, // 건드려도 됨
+    heightNum: 3, 
   },
   section_2: {
     $section_2: document.querySelector(".section_2"),
     text: {
       $text: document.querySelector(".section_2 .text"),
-      startRatio: 0.05, // 건드려도 됨
-      step_1_ratio: 0.2, // 건드려도 됨
-      step_2_ratio: 0.3, // 건드려도 됨
-      step_3_ratio: 0.5, // 건드려도 됨
-      endRatio: 0.88, // 건드려도 됨 근데 비추
+      startRatio: 0.05, 
+      step_1_ratio: 0.2, 
+      step_2_ratio: 0.3, 
+      step_3_ratio: 0.5, 
+      endRatio: 0.88, 
     },
     $circle: document.querySelector(".section_2 .circle"),
-    heightNum: 6, // 건드려도 됨
+    heightNum: 6, 
   },
   section_3: {
     $section_3: document.querySelector(".section_3"),
@@ -32,8 +32,8 @@ const data = {
     $article_4: document.querySelector(".article_4"),
   },
 };
-let 반지름 = 8; // px단위
-let 원의크기 = 4; // %단위
+let 반지름 = 8; 
+let 원의크기 = 4;
 let 회전속도 = 12000;
 
 /**
@@ -252,17 +252,9 @@ const scrollEvent = () => {
     const ratio = (scrollY / (heightNum * innerHeight)).toFixed(2);
 
     if (startRatio >= ratio) {
-      // 글자가 나타나기 전
-      // $text.style.opacity = 0;
-      // $text.style.transform = `translateY(0)`;
+
     } else if (halfRatio >= ratio && ratio > startRatio) {
-      // 글자가 나타나는 부분
-      // const partialRatio = (
-      //   (ratio - startRatio) /
-      //   (halfRatio - startRatio)
-      // ).toFixed(2);
-      // $text.style.opacity = partialRatio;
-      // $text.style.transform = `translateY(-${partialRatio * 50}%)`;
+
     } else if (endRatio >= ratio && ratio > halfRatio) {
       // 글자가 사라지는 부분
       const partialRatio = (
@@ -391,9 +383,7 @@ const scrollEvent = () => {
   }
 };
 
-/**
- * init
- */
+
 scrollEvent();
 addEventListener("scroll", scrollEvent);
 addEventListener("resize", () => {

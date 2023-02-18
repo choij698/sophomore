@@ -9,10 +9,9 @@
 
 body {
   box-sizing: border-box;
-  -ms-overflow-style: none; /* 인터넷 익스플로러 */
-  scrollbar-width: none; /* 파이어폭스 */
+  -ms-overflow-style: none; /* internet explorer */
+  scrollbar-width: none; /* firefox */
   font-family: Arial, Helvetica, sans-serif;
-  /* set cursoer image */
   cursor: s-resize;
 }
 
@@ -159,7 +158,7 @@ body .section_3 .article_4 .text {
 .button_4:hover {
   background-color: transparent;
   border-color: transparent;
-  /* 호버했을 때 커서 */
+
   cursor: help;
 }
 .button_1:focus,
@@ -168,13 +167,12 @@ body .section_3 .article_4 .text {
 .button_4:focus {
   background-color: transparent;
   border-color: transparent;
-  /* 클릭했을 때 커서 */
-  /* cursor: wait; */
+
 }
 
 .article_4_back,
 .article_2_back {
-  /* todo: 디자인 */
+
   position: fixed;
   top: 50%;
   right: 4vw;
