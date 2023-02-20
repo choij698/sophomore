@@ -23,8 +23,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  background-color: black;
 }
 
 .text1,
@@ -38,8 +36,6 @@ a {
   font-family: "Neuton", serif;
   letter-spacing: 2.5px;
   animation: fadeIn 1s ease-in-out;
-
-  color: white;
 }
 
 .text1 {
@@ -53,17 +49,17 @@ a {
 }
 
 a:link {
-  color: white;
+  color: black;
   margin-top: 1%;
   font-style: italic;
 }
 
 a:hover {
-  color: white;
+  color: black;
 }
 
 a:visited {
-  color: white;
+  color: black;
 }
 
 .btn {
@@ -76,8 +72,6 @@ a:visited {
   left: 50%;
   transform: translate(-50%, 0);
   gap: 20vw;
-
-  color: white;
 }
 
 .sentence1,
@@ -88,7 +82,16 @@ a:visited {
   animation: fadeIn 1s ease-in-out;
   font-family: "Neuton", serif;
   letter-spacing: 2px;
+}
 
+.wrapper_night {
+  background-color: black;
+}
+
+.wrapper_night .text1,
+.wrapper_night .text2,
+.wrapper_night .btn,
+.wrapper_night a {
   color: white;
 }
 

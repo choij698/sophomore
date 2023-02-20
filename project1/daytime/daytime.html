@@ -10,7 +10,7 @@
   </head>
   <body>
     <!-- 5am -->
-    <div class="wrapper_night">
+    <div class="wrapper_daytime">
       <div class="sentence1">Follow where the light reaches.</div>
       <div class="sentence2">What kind of shadows do you see?</div>
 
@@ -21,7 +21,7 @@
 
     <!-- 7pm -->
 
-    <div class="wrapper_daytime">
+    <div class="wrapper_night">
       <div class="text1">It's currently dark out.</div>
 
       <div class="text2">
@@ -29,7 +29,7 @@
         See you when the sun comes out.
       </div>
 
-      <a href="/night/night.html">Wanna see starry sky instead?</a>
+      <a href="/project1/night/night.html">Wanna see starry sky instead?</a>
 
       <div class="btn">
         <span class="clock"></span>
@@ -39,7 +39,7 @@
     <script>
       let datetime = new Date();
       // if (datetime.getHours() >= 5 && datetime.getHours() < 17) {
-      if (datetime.getHours() < 5 && datetime.getHours() >= 17) {
+      if (datetime.getHours() < 5 || datetime.getHours() >= 17) {
         document.querySelector(".wrapper_night").style.display = "flex";
         document.querySelector(".wrapper_daytime").style.display = "none";
       } else {

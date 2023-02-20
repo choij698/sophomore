@@ -18,7 +18,7 @@
         See you when the stars come out.
       </div>
 
-      <a href="/daytime/daytime.html">Wanna see daylight instead?</a>
+      <a href="/project1/daytime/daytime.html">Wanna see daylight instead?</a>
 
       <div class="btn">
         <span class="clock"></span>
@@ -93,7 +93,7 @@
     <script>
       let datetime = new Date();
       // if (datetime.getHours() >= 5 && datetime.getHours() < 17) {
-        if (datetime.getHours() < 5 && datetime.getHours() >= 17) {
+        if (datetime.getHours() < 5 || datetime.getHours() >= 17) {
         document.querySelector(".wrapper_night").style.display = "flex";
         document.querySelector(".wrapper_daytime").style.display = "none";
       } else {
