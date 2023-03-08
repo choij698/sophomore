@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>OuLiPo</title>
+    <meta
+      name="description"
+      content="OuLiPo x William Carlos William's This Is Just To Say"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <style>
+      body {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <script>
+    // We haven't covered functions yet, so just use this for now.
+    // Example usage: `randomItemFromArray(pastParticiples)`
+    function randomItemFromArray(arr) {
+      return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    // 1a
+    // Declare variable called `pastParticiples`. Initialize it with an Array of strings verbs in the past tense.
+    var pastParticiples = ["eaten", "taken", "spoken", "written", "discovered", "explored", "traveled", "studied", "tasted"];
+
+    // 1b
+    // Next, declare a variable called `pastParticiple`. Initialize it with `randomItemFromArray(pastParticiples)`.
+    var pastParticiple = randomItemFromArray(pastParticiples);
+
+    // 2a
+    // Declare a variable called `nouns`. Initialize it with an Array of strings that are nouns.
+    var nouns = ["cupcakes", "melodies", "starbursts", "bubblegums", "computers", "sunflowers", "cameras", "books", "grapes", "birds", "glasses", "clouds", "rivers", "candles", "people", "pillows", "hats"];
+
+    // 2b
+    // Next, declare variables `noun1`, `noun2` and `noun3`. Initialize them all using `randomItemFromArray(nouns)`.
+    var noun1 = randomItemFromArray(nouns);
+    var noun2 = randomItemFromArray(nouns);
+    var noun3 = randomItemFromArray(nouns);
+
+    // 3a
+    // Declare a variable called `adjectives`. Initialize it with an Array of strings that are adjectives.
+    var adjectives = ["delicious", "sweet", "tasty", "juicy", "whimsical", "mysterious", "curious", "bitter", "silky", "soft", "cozy", "gentle", "innocent", "lazy", "peaceful", "lively", "thoughtful"];
+
+    // 3b
+    // Next, declare variables `adj1`, `adj2` and `adj3`. Initialize them all using `randomItemFromArray(adjectives)`.
+    var adj1 = randomItemFromArray(adjectives);
+    var adj2 = randomItemFromArray(adjectives);
+    var adj3 = randomItemFromArray(adjectives);
+
+    // Declaring a variable `poem` and intializing it with a string value.
+    // Note: the `${}`. This acts as placeholders in the string of poem text.
+    var poem = `
+      <span>I have ${pastParticiple}</span>
+      <br/>
+      <span>the ${noun1}</span>
+      <br/>
+      <span>that were in</span>
+      <br/>
+      <span>the ${noun2}</span>
+      <br/>
+      <br/>
+      <span>and which</span>
+      <br/>
+      <span>you were probably</span>
+      <br/>
+      <span>saving</span>
+      <br/>
+      <span>for the ${noun3}</span>
+      <br/>
+      <br/>
+      <span>Forgive me</span>
+      <br/>
+      <span>they were ${adj1}</span>
+      <br/>
+      <span>so ${adj2}</span>
+      <br/>
+      <span>and so ${adj3}</span>
+    `;
+
+    // If you have declared and initialized all the variables correctly, you should see a new poem.
+    // Open up the Chrome developer console (via Option+Command+I), navigate to the "Console" tab,
+    // and you should see your new output.
+    // console.log(poem);
+
+    const poemOriginal = `
+      I have eaten
+      the plums
+      that were in
+      the icebox
+
+      and which
+      you were probably
+      saving
+      for breakfast
+
+      Forgive me
+      they were delicious
+      so sweet
+      and so cold
+    `;
+  </script>
+  <body>
+    <div class="origin">
+      I have eaten <br />
+      the plums <br />
+      that were in <br />
+      the icebox <br />
+      <br />
+      and which <br />
+      you were probably <br />
+      saving <br />
+      for breakfast <br />
+      <br />
+      Forgive me <br />
+      they were delicious <br />
+      so sweet <br />
+      and so cold <br />
+    </div>
+    <div class="calculate"></div>
+
+    <script>
+      document.querySelector(".calculate").innerHTML = poem;
+    </script>
+  </body>
+</html>
