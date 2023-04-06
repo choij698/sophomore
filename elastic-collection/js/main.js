@@ -48,7 +48,7 @@ const moods = {
   'BE CREATIVE': 'want to be creative',
 };
 // 스포일러 array ! ! ! !  !! ! ! ! !
-const spoilers = [1, 2, 9, 11, 16, 17, 19, 21, 23, 24, 25, 26, 28, 32, 33, 35, 42, 43, 47, 49];
+const spoilers = [1, 2, 9, 11, 14, 16, 17, 18, 19, 21, 22, 23, 24, 25, 26, 27, 28, 32, 33, 35, 40, 42, 43, 47, 49];
 let _state = 'home';
 switchTitle(_state);
 
