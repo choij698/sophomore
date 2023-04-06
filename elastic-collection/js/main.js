@@ -127,7 +127,7 @@ function appendSpoilerElement(key) {
     const container = document.createElement('div');
     container.classList.add('modal_content');
     const modalImg = document.createElement('img');
-    modalImg.src = `../data/spoiler_img/${key}.png`;
+    modalImg.src = `./data/spoiler_img/${key}.png`;
     container.appendChild(modalImg);
     document.querySelector('.modal').appendChild(container);
   });
