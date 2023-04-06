@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="img/favicon2.png" />
+    <title>What kind of shadows do you see?</title>
+  </head>
+  <body>
+    <!-- 5am -->
+    <div class="wrapper_daytime">
+      <div class="sentence1">Follow where the light reaches.</div>
+      <div class="sentence2">What kind of shadows do you see?</div>
+
+      <div class="btn">
+        <span class="clock"></span>
+      </div>
+    </div>
+
+    <!-- 7pm -->
+
+    <div class="wrapper_night">
+      <div class="text1">It's currently dark out.</div>
+
+      <div class="text2">
+        You may go see sunset from 5AM — 7PM. <br />
+        See you when the sun comes out.
+      </div>
+
+      <a href="/project1/night/night.html">Wanna see starry sky instead?</a>
+
+      <div class="btn">
+        <span class="clock"></span>
+      </div>
+    </div>
+
+    <script>
+      let datetime = new Date();
+      // if (datetime.getHours() >= 5 && datetime.getHours() < 17) {
+      if (datetime.getHours() < 5 || datetime.getHours() >= 17) {
+        document.querySelector(".wrapper_night").style.display = "flex";
+        document.querySelector(".wrapper_daytime").style.display = "none";
+      } else {
+        document.querySelector(".wrapper_night").style.display = "none";
+        document.querySelector(".wrapper_daytime").style.display = "flex";
+      }
+      const setTime = () => {
+        const clocks = document.querySelectorAll(".clock");
+        let datetime = new Date();
+        let hours = datetime.getHours();
+        let minutes = datetime.getMinutes();
+        // let seconds = datetime.getSeconds();
+        let ampm = hours >= 12 ? "PM" : "AM";
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        // seconds = seconds < 10 ? "0" + seconds : seconds;
+        let time = hours + ":" + minutes + " " + ampm;
+        clocks.forEach((clock) => (clock.innerHTML = time));
+      };
+      setTime();
+      setInterval(setTime, 1000);
+    </script>
+  </body>
+</html>

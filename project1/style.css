@@ -1,0 +1,228 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Neuton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: border-box;
+  -ms-overflow-style: none; /* internet explorer */
+  scrollbar-width: none; /* firefox */
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: s-resize;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body .section_1.active,
+body .section_2.active {
+  display: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+body > section {
+  position: relative;
+}
+body .section_1 .text {
+  position: sticky;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 130px;
+
+  font-family: "Abril Fatface", cursive;
+  word-spacing: 1vw;
+  letter-spacing: 0.3vw;
+}
+body .section_2 .text {
+  opacity: 0;
+  position: sticky;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: black;
+  font-family: "Abril Fatface", cursive;
+}
+body .section_2 .text .hide {
+  display: inline-block;
+}
+body .section_2 .text .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: black;
+  z-index: -1;
+  aspect-ratio: 1/1;
+}
+body .section_2 .text.floating {
+  position: fixed;
+  top: 70px;
+  width: 100%;
+  z-index: 2;
+  color: white;
+}
+body .section_2 .text.floating .br {
+  display: none;
+}
+body .section_3 {
+  overflow: hidden;
+}
+body .section_3 > article {
+  height: 100vh;
+  width: 100%;
+  transition: top 0.5s ease;
+}
+body .section_3 .article_1 {
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body .section_3 .article_1 button,
+body .section_3 .article_1 a {
+  width: 25vw;
+  aspect-ratio: 1/1;
+  font-size: 15vw;
+}
+body .section_3 .article_1 .top_box {
+  display: flex;
+}
+body .section_3 .article_1 .bottom_box {
+  display: flex;
+}
+
+body .section_3 .article_2,
+body .section_3 .article_4 {
+  position: absolute;
+  top: 100vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+body .section_3 .article_2.active,
+body .section_3 .article_4.active {
+  top: 0vh;
+}
+body .section_3 .article_2 .text,
+body .section_3 .article_4 .text {
+  height: 100vh;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: circle(0% at 50% 50%);
+  letter-spacing: 0.25vw;
+  line-height: 22px;
+  font-size: 20px;
+  padding: 10vh 18vw;
+  font-family: "Neuton", serif;
+
+  cursor: default;
+}
+
+.button_1,
+.button_2,
+.button_3,
+.button_4 {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.button_1:hover,
+.button_2:hover,
+.button_3:hover,
+.button_4:hover {
+  background-color: transparent;
+  border-color: transparent;
+
+  cursor: help;
+}
+.button_1:focus,
+.button_2:focus,
+.button_3:focus,
+.button_4:focus {
+  background-color: transparent;
+  border-color: transparent;
+
+}
+
+.article_4_back,
+.article_2_back {
+
+  position: fixed;
+  top: 50%;
+  right: 4vw;
+  transform: translate(0, -50%);
+  display: none;
+
+  font-size: 20px;
+  cursor: help;
+}
+
+.article_2.active .article_2_back,
+.article_4.active .article_4_back {
+  display: block;
+}
+
+
+
+/* media query */
+
+@media (max-width: 1100px) {
+  body .section_1 .text {
+    font-size: 100px;
+  }
+
+  body .section_3 .article_2 .text,
+body .section_3 .article_4 .text {
+  font-size: 16px;
+}
+
+.article_4_back,
+.article_2_back {
+  font-size: 16px;
+}
+
+
+}
+
+@media (max-width: 500px) {
+  body .section_1 .text {
+    font-size: 70px;
+  }
+
+  body .section_3 .article_2 .text,
+body .section_3 .article_4 .text {
+  font-size: 14px;
+}
+
+.article_4_back,
+.article_2_back {
+  font-size: 14px;
+}
+
+}

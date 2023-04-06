@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url("https://use.typekit.net/veg4obe.css");
+
+@keyframes scaleAnimation {
+	from {
+		opacity: 0;
+
+		transform: translateY(-50px) ;
+
+        /* 이건 위에서 아래로 . . . . . */
+		/* transform: translateY(95px) ; */
+	}
+	
+	to {
+		opacity: 1;
+		transform: scale(1, 1);
+	}
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+h2 {
+	text-align: center;
+	margin: 0px;
+	display: block;
+	height: 100px;
+	line-height: 100px;
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	margin-top: -50px;
+}
+
+h2 span {
+	display: inline-block;
+	opacity: 0;
+    animation: scaleAnimation 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+
+/* serif serif serif serif serif serif serif */
+.mainTxt_1 {
+	font-family: 'Libre Baskerville', serif;
+	font-weight: 100;
+	font-size: 30px;
+}
+
+.mainTxt_2 {
+	font-family: 'Libre Baskerville', serif;
+	font-weight: 100;
+	font-size: 30px;
+
+	animation-delay: 20ms;
+}
+
+.mainTxt_3 {
+	font-family: 'Libre Baskerville', serif;
+	font-weight: 100;
+	font-size: 30px;
+
+	animation-delay: 40ms;
+}
+
+.mainTxt_4 {
+	font-family: 'Libre Baskerville', serif;
+	font-weight: 100;
+	font-size: 30px;
+
+	animation-delay: 60ms;
+
+}
+
+.mainTxt_5 {
+	font-family: 'Libre Baskerville', serif;
+	font-weight: 100;
+	font-size: 30px;
+
+	animation-delay: 80ms;
+}
+
+/* cursive cursive cursive cursive cursive cursive cursive */
+.delay_1 {
+	font-family: "caprizant", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 35px;
+
+	animation-delay: 300ms;
+}
+
+.delay_2 {
+	font-family: "caprizant", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 35px;
+
+	animation-delay: 400ms;
+}
+
+.delay_3 {
+	font-family: "caprizant", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 35px;
+
+	animation-delay: 500ms;
+}
+
+.delay_4 {
+	font-family: "caprizant", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 35px;
+
+	animation-delay: 600ms;
+}
+
+

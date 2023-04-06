@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="img/favicon3.png" />
+    <title>Have a good night.</title>
+  </head>
+  <body>
+    <!-- 5am -->
+    <div class="wrapper_daytime">
+      <div class="text1">It's currently light out.</div>
+
+      <div class="text2">
+        You may go see starry sky from 7PM — 5AM. <br />
+        See you when the stars come out.
+      </div>
+
+      <a href="/project1/daytime/daytime.html">Wanna see daylight instead?</a>
+
+      <div class="btn">
+        <span class="clock"></span>
+      </div>
+    </div>
+
+    <!-- 7pm -->
+
+    <div class="wrapper_night">
+      <div class="sentence1">Have a good night.</div>
+
+      <div class="stars">
+        <div class="star1">*</div>
+        <div class="star2">*</div>
+        <div class="star3">*</div>
+        <div class="star4">*</div>
+        <div class="star5">*</div>
+        <div class="star6">*</div>
+        <div class="star7">☆</div>
+        <div class="star8">☆</div>
+
+        <div class="star9">☆</div>
+        <div class="star10">☆</div>
+        <div class="star11">★️</div>
+        <div class="star12">★️</div>
+        <div class="star13">☆</div>
+        <div class="star14">★️</div>
+        <div class="star15">☆</div>
+        <div class="star16">☆</div>
+
+        <div class="star17">✹️</div>
+        <div class="star18">✹️</div>
+        <div class="star19">✹️</div>
+        <div class="star20">✹️</div>
+        <div class="star21">✹️</div>
+        <div class="star22">✹️</div>
+        <div class="star23">☆</div>
+        <div class="star24">☆</div>
+
+        <div class="star25">.</div>
+        <div class="star26">.</div>
+        <div class="star27">.</div>
+        <div class="star28">.</div>
+        <div class="star29">.</div>
+        <div class="star30">.</div>
+        <div class="star31">.</div>
+        <div class="star32">.</div>
+
+        <div class="star33">*</div>
+        <div class="star34">*</div>
+        <div class="star35">*</div>
+
+        <div class="star41">✹️</div>
+        <div class="star42">✹️</div>
+        <div class="star43">✹️</div>
+        <div class="star44">✹️</div>
+        <div class="star45">.</div>
+        <div class="star46">.</div>
+        <div class="star47">.</div>
+        <div class="star48">.</div>
+        <div class="star49">.</div>
+        <div class="star50">.</div>
+        <div class="star51">.</div>
+        <div class="star52">.</div>
+      </div>
+
+      <div class="btn">
+        <span class="clock"></span>
+      </div>
+    </div>
+
+    <script>
+      let datetime = new Date();
+      // if (datetime.getHours() >= 5 && datetime.getHours() < 17) {
+        if (datetime.getHours() < 5 || datetime.getHours() >= 17) {
+        document.querySelector(".wrapper_night").style.display = "flex";
+        document.querySelector(".wrapper_daytime").style.display = "none";
+      } else {
+        document.querySelector(".wrapper_night").style.display = "none";
+        document.querySelector(".wrapper_daytime").style.display = "flex";
+      }
+      const setTime = () => {
+        const clocks = document.querySelectorAll(".clock");
+        let datetime = new Date();
+        let hours = datetime.getHours();
+        let minutes = datetime.getMinutes();
+        // let seconds = datetime.getSeconds();
+        let ampm = hours >= 12 ? "PM" : "AM";
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        // seconds = seconds < 10 ? "0" + seconds : seconds;
+        let time = hours + ":" + minutes + " " + ampm;
+        clocks.forEach((clock) => (clock.innerHTML = time));
+      };
+      setTime();
+      setInterval(setTime, 1000);
+    </script>
+  </body>
+</html>

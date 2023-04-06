@@ -1,0 +1,491 @@
+@import url("https://fonts.googleapis.com/css2?family=Neuton&display=swap");
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+
+  cursor: help;
+}
+
+/* daytime */
+
+.wrapper_night,
+.wrapper_daytime {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+
+  font-family: "Neuton", serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper_night {
+  background-color: black;
+  color: white;
+}
+
+.sentence1 {
+  font-size: 20px;
+  animation: fadeIn 1s ease-in-out;
+
+  font-family: "Neuton", serif;
+  letter-spacing: 2px;
+}
+
+.text1,
+.text2,
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  letter-spacing: 2.5px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.text1 {
+  font-size: 30px;
+  margin-bottom: 1%;
+}
+
+.text2,
+a {
+  font-size: 18px;
+}
+
+a:link {
+  color: inherit;
+  margin-top: 1%;
+  font-style: italic;
+}
+
+a:hover {
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  bottom: 2vh;
+  left: 50%;
+  transform: translate(-50%, 0);
+  gap: 20vw;
+  color: inherit;
+}
+
+/* starts */
+
+.stars {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  color: white;
+}
+
+.star1 {
+  position: relative;
+  top: 30vh;
+  left: 3vw;
+  font-size: 20px;
+}
+
+.star2 {
+  position: relative;
+  top: 29vh;
+  left: 25vw;
+  font-size: 10px;
+  animation: blink 3s infinite;
+}
+
+.star3 {
+  position: relative;
+  top: 70vh;
+  left: 39vw;
+  font-size: 15px;
+  animation: blink 5s infinite;
+}
+
+.star4 {
+  position: relative;
+  top: 50vh;
+  left: 20vw;
+  font-size: 20px;
+
+}
+.star5 {
+  position: relative;
+  top: 70vh;
+  left: 80vw;
+  font-size: 20px;
+  opacity: 60%;
+
+}
+.star6 {
+  position: relative;
+  top: 50vh;
+  left: 60vw;
+  font-size: 10px;
+  animation: blink 3s infinite;
+
+}
+.star7 {
+  position: relative;
+  top: 2vh;
+  left: 29vw;
+  font-size: 12px;
+}
+.star8 {
+  position: relative;
+  top: 50vh;
+  left: 55vw;
+  font-size: 10px;
+  animation: blink 5s infinite;
+  opacity: 60%;
+
+}
+.star9 {
+  position: relative;
+  top: 3vh;
+  left: 80vw;
+  font-size: 15px;
+  opacity: 40%;
+}
+.star10 {
+  position: relative;
+  top: -20vh;
+  left: 30vw;
+  font-size: 17px;
+  opacity: 20%;
+}
+.star11 {
+  position: relative;
+  top: 3vh;
+  left: 60vw;
+  font-size: 17px;
+  opacity: 60%;
+  animation: blink 8s infinite;
+}
+.star12 {
+  position: relative;
+  top: 50vh;
+  left: 90vw;
+  font-size: 12px;
+  animation: blink 4s infinite;
+}
+
+.star13 {
+  position: relative;
+  top: 3vh;
+  left: 18vw;
+  font-size: 15px;
+}
+.star14 {
+  position: relative;
+  top: 20vh;
+  left: 4vw;
+  font-size: 15px;
+  animation: blink 7s infinite;
+}
+
+.star15 {
+  position: relative;
+  top: 3vh;
+  left: 78vw;
+  font-size: 20px;
+  animation: blink 8s infinite;
+}
+
+.star16 {
+  position: relative;
+  top: 3vh;
+  left: 36vw;
+  font-size: 8px;
+}
+
+.star17 {
+  position: relative;
+  top: 3vh;
+  left: 90vw;
+  font-size: 8px;
+}
+
+.star18 {
+  position: relative;
+  top: 3vh;
+  left: 20vw;
+  font-size: 10px;
+  opacity: 60%;
+}
+.star19 {
+  position: relative;
+  top: -38vh;
+  left: 70vw;
+  font-size: 10px;
+}
+.star20 {
+  position: relative;
+  top: -30vh;
+  left: 40vw;
+  font-size: 7px;
+  animation: blink 13s infinite;
+}
+.star21 {
+  position: relative;
+  top: 3vh;
+  left: 78vw;
+  font-size: 12px;
+  animation: blink 7s infinite;
+}
+.star22 {
+  position: relative;
+  top: 30vh;
+  left: 60vw;
+  font-size: 16px;
+  animation: blink 6s infinite;
+  opacity: 10%;
+}
+.star23 {
+  position: relative;
+  top: 3vh;
+  left: 29vw;
+  font-size: 15px;
+  animation: blink 5s infinite;
+}
+.star24 {
+  position: relative;
+  top: 3vh;
+  left: 93vw;
+  font-size: 10px;
+  animation: blink 8s infinite;
+  opacity: 60%;
+}
+.star25 {
+  position: relative;
+  top: 14vh;
+  left: 75vw;
+  font-size: 20px;
+  animation: blink 2s infinite;
+}
+.star26 {
+  position: relative;
+  top: -38vh;
+  left: 68vw;
+  font-size: 20px;
+  animation: blink 1s infinite;
+}
+
+.star27 {
+  position: relative;
+  top: -60vh;
+  left: 89vw;
+  font-size: 25px;
+  animation: blink 5s infinite;
+}
+.star28 {
+  position: relative;
+  top: -45vh;
+  left: 10vw;
+  font-size: 20px;
+  opacity: 60%;
+
+}
+
+.star29 {
+  position: relative;
+  top: -10vh;
+  left: 2vw;
+  font-size: 20px;
+  animation: blink 5s infinite;
+}
+.star30 {
+  position: relative;
+  top: -5vh;
+  left: 46vw;
+  font-size: 25px;
+}
+.star31 {
+  position: relative;
+  top: -60vh;
+  left: 40vw;
+  font-size: 20px;
+  animation: blink 18s infinite;
+}
+.star32 {
+  position: relative;
+  top: -47vh;
+  left: 25vw;
+  font-size: 20px;
+  animation: blink 4s infinite;
+}
+
+.star33 {
+  position: relative;
+  top: -80vh;
+  left: 58vw;
+  font-size: 20px;
+  animation: blink 4s infinite;
+  opacity: 60%;
+
+}
+.star34 {
+  position: relative;
+  top: -10vh;
+  left: 6vw;
+  font-size: 20px;
+  animation: blink 5s infinite;
+}
+
+.star35 {
+  position: relative;
+  top: -90vh;
+  left: 90vw;
+  font-size: 20px;
+  animation: blink 1s infinite;
+}
+
+.star41 {
+  position: relative;
+  top: -96vh;
+  left: 93vw;
+  font-size: 20px;
+  animation: blink 10s infinite;
+}
+.star42 {
+  position: relative;
+  top: -98vh;
+  left: 8vw;
+  font-size: 10px;
+}
+.star43 {
+  position: relative;
+  top: -38vh;
+  left: 68vw;
+  font-size: 14px;
+  animation: blink 10s infinite;
+  opacity: 60%;
+
+}
+
+.star44 {
+  position: relative;
+  top: -36vh;
+  left: 9vw;
+  font-size: 16px;
+  animation: blink 6s infinite;
+}
+.star45 {
+  position: relative;
+  top: -70vh;
+  left: 10vw;
+  font-size: 20px;
+  animation: blink 3s infinite;
+}
+.star46 {
+  position: relative;
+  top: -90vh;
+  left: 50vw;
+  font-size: 20px;
+  animation: blink 1s infinite;
+}
+.star47 {
+  position: relative;
+  top: -80vh;
+  left: 46vw;
+  font-size: 20px;
+  animation: blink 2s infinite;
+}
+.star48 {
+  position: relative;
+  top: -60vh;
+  left: 40vw;
+  font-size: 20px;
+  animation: blink 7s infinite;
+}
+.star49 {
+  position: relative;
+  top: -47vh;
+  left: 25vw;
+  font-size: 20px;
+  animation: blink 3s infinite;
+  opacity: 60%;
+
+}
+
+.star50 {
+  position: relative;
+  top: 3vh;
+  left: 58vw;
+  font-size: 20px;
+  animation: blink 10s infinite;
+}
+.star51 {
+  position: relative;
+  top: 3vh;
+  left: 3vw;
+  font-size: 20px;
+  animation: blink 5s infinite;
+}
+.star52 {
+  position: relative;
+  top: 3vh;
+  left: 3vw;
+  font-size: 20px;
+  animation: blink 1s infinite;
+  opacity: 60%;
+
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* media query */
+
+@media (max-width: 400px) {
+
+  .sentence1 {
+  font-size: 16px;
+}
+  .text1 {
+    font-size: 20px;
+  }
+
+  .text2,
+  a {
+    font-size: 12px;
+  }
+
+}
