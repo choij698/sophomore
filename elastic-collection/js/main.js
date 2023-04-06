@@ -121,7 +121,7 @@ function setMoodArr(mood) {
 
 function appendSpoilerElement(key) {
   const img = document.createElement('img');
-  img.src = `../data/img/${key}.jpg`;
+  img.src = `./data/img/${key}.jpg`;
   img.addEventListener('click', () => {
     console.log(key);
     const container = document.createElement('div');
@@ -140,7 +140,7 @@ function appendSpoilerElement(key) {
 
 function appendImgElement(key) {
   const img = document.createElement('img');
-  img.src = `../data/img/${key}.jpg`;
+  img.src = `./data/img/${key}.jpg`;
   if (drama[key].netflixLink !== '') {
     img.classList.add('link');
   }
