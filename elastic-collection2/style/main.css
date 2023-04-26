@@ -1,0 +1,637 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://use.typekit.net/veg4obe.css');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+@font-face {
+  font-family: 'netflix';
+  src: url('../font/NetflixSans-Medium.otf') format('opentype');
+}
+@keyframes scale-in {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes scaleAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(95px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+@keyframes scaleAnimation2 {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.display-none {
+  display: none !important;
+}
+
+.mobile {
+  display: none;
+}
+
+h1,
+h2,
+button,
+a {
+  all: unset;
+}
+
+body {
+  background-color: burlywood;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  cursor: url('../img/cursor.png'), auto;
+  background-image: url('../img/background.png');
+  background-size: cover;
+  background-position: center;
+}
+body .splash {
+  background-color: #fff2e3;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  font-family: 'Akaya Telivigala';
+  font-style: normal;
+  color: #f2c076;
+  text-shadow: 3px 5px 4px rgba(0, 0, 0, 0.25);
+}
+body .splash .text_box > * {
+  font-weight: 400;
+  transform: scale(0);
+}
+body .splash .text_box .top {
+  display: inline-block;
+  font-size: 65px;
+  animation: scale-in 0.5s ease-in-out 0.5s forwards;
+  position: relative;
+  top: 30px;
+}
+@media (max-width: 768px) {
+  body .splash .text_box .top {
+    font-size: 30px;
+    top: 10px;
+  }
+}
+body .splash .text_box .main {
+  font-size: 170px;
+  animation: scale-in 0.5s ease-in-out 0s forwards;
+  margin-bottom: 50px;
+}
+@media (max-width: 768px) {
+  body .splash .text_box .main {
+    font-size: 70px;
+  }
+}
+body .modal .modal_content {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+body .modal .modal_content img {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+body header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 135px;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  body header {
+    height: 120px;
+  }
+}
+@media (max-width: 768px) {
+  body header {
+    height: 120px;
+  }
+}
+body header .content {
+  display: flex;
+  width: 80%;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media (max-width: 1024px) {
+  body header .content {
+    gap: 10px;
+  }
+}
+@media (max-width: 768px) {
+  body header .content {
+    gap: 5px;
+    width: 90%;
+  }
+}
+body header .content h1 {
+  font-family: 'Akaya Telivigala';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+  color: #f2c076;
+  text-shadow: 3px 5px 4px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 768px) {
+  body header .content h1 {
+    font-size: 40px;
+  }
+}
+body header .content .category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  background: #f5ebde;
+  border-radius: 100px;
+  padding: 0 10px;
+  flex: 0 1 auto;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: 'netflix';
+}
+body header .content .category.selected {
+  background: #f2c177;
+}
+@media (max-width: 1024px) {
+  body header .content .category {
+    font-size: 14px;
+    height: 25px;
+  }
+}
+@media (max-width: 768px) {
+  body header .content .category {
+    height: 20px;
+    padding: 0 5px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 23px;
+  }
+}
+body header .home {
+  position: absolute;
+  font-family: 'netflix';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 33px;
+  right: 50px;
+  top: 50px;
+}
+@media (max-width: 768px) {
+  body header .home {
+    display: none !important;
+  }
+}
+body header .menu_title {
+  display: flex;
+  width: 80%;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 2;
+  font-family: 'Akaya Telivigala';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+  color: #ffffff;
+  margin-top: 20px;
+}
+@media (max-width: 768px) {
+  body header .menu_title {
+    font-size: 40px;
+    margin-top: 40px;
+  }
+}
+body header .menu_btn {
+  position: absolute;
+  right: 50px;
+  top: 45px;
+  z-index: 2;
+  width: 60px;
+  height: auto;
+  transition: transform 0.05s ease-in-out;
+}
+body header .menu_btn:hover {
+  transform: scale(1.2);
+}
+@media (max-width: 768px) {
+  body header .menu_btn {
+    width: 40px;
+    top: 46px;
+    right: 30px;
+  }
+}
+
+body header .home {
+  position: absolute;
+  right: 50px;
+  top: 45px;
+  z-index: 2;
+  width: 60px;
+  height: auto;
+  transition: transform 0.05s ease-in-out;
+}
+body header .home:hover {
+  transform: scale(1.2);
+}
+@media (max-width: 768px) {
+  body header .home {
+    width: 40px;
+    top: 46px;
+    right: 30px;
+  }
+}
+body header .menu {
+  background-color: #303030;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  transition: left 0.35s ease-in-out;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  font-family: 'netflix';
+}
+body header .menu > button {
+  font-weight: 400;
+  font-size: 35px;
+  opacity: 0;
+  transform: translateY(-20px);
+  color: #ffffff;
+}
+body header .menu > button h2 {
+  display: none;
+}
+body header .menu > button h2 span {
+  font-size: 40px;
+}
+body header .menu > button:hover h2 {
+  display: unset;
+}
+body header .menu > button:hover .default {
+  display: none;
+}
+@media (max-width: 768px) {
+  body header .menu > button {
+    font-size: 25px;
+  }
+}
+body header.show .menu {
+  left: 0;
+}
+body header.show .menu .menu_1 {
+  animation: fade-in 0.4s ease-in-out 0.2s forwards;
+}
+body header.show .menu .menu_1 > div {
+  transition: transform 0.05s ease-in-out;
+}
+body header.show .menu .menu_1:hover > div {
+  transform: scale(1.2);
+}
+body header.show .menu .menu_2 {
+  animation: fade-in 0.4s ease-in-out 0.25s forwards;
+}
+body header.show .menu .menu_2 > div {
+  transition: transform 0.05s ease-in-out;
+}
+body header.show .menu .menu_2:hover > div {
+  transform: scale(1.2);
+}
+body header.show .menu .menu_3 {
+  animation: fade-in 0.4s ease-in-out 0.3s forwards;
+}
+body header.show .menu .menu_3 > div {
+  transition: transform 0.05s ease-in-out;
+}
+body header.show .menu .menu_3:hover > div {
+  transform: scale(1.2);
+}
+body main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex: 1;
+}
+@media (max-width: 768px) {
+  body main {
+    align-items: flex-start;
+  }
+}
+body main .scroll_box {
+  width: 80vw;
+  height: 65vh;
+  display: flex;
+  gap: 1.5vw;
+  overflow-x: overlay;
+  padding-bottom: 30px;
+}
+@media (max-width: 768px) {
+  body main .scroll_box {
+    width: 100vw;
+    gap: 3vw;
+    height: 50vh;
+  }
+}
+body main .scroll_box::-webkit-scrollbar {
+  height: 15px;
+}
+@media (max-width: 768px) {
+  body main .scroll_box::-webkit-scrollbar {
+    height: 10px;
+  }
+}
+body main .scroll_box::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 35px;
+}
+body main .scroll_box::-webkit-scrollbar-track {
+  background: #ffecd7;
+  border-radius: 35px;
+}
+body main .scroll_box img {
+  width: 7vw;
+  object-fit: cover;
+  transition: width 0.45s ease-in-out;
+}
+@media (max-width: 768px) {
+  body main .scroll_box img {
+    width: 13vw;
+  }
+}
+body main .scroll_box img:nth-child(6n-5) {
+  margin-top: 80px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+body main .scroll_box img:nth-child(6n-4) {
+  margin-top: 20px;
+  margin-bottom: 80px;
+  border-radius: 5px;
+}
+body main .scroll_box img:nth-child(6n-3) {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+}
+body main .scroll_box img:nth-child(6n-2) {
+  margin-top: 0px;
+  margin-bottom: 100px;
+  border-radius: 5px;
+}
+body main .scroll_box img:nth-child(6n-1) {
+  margin-top: 100px;
+  margin-bottom: 0px;
+  border-radius: 5px;
+}
+body main .scroll_box img:nth-child(6n) {
+  margin-top: 40px;
+  margin-bottom: 60px;
+  border-radius: 5px;
+}
+body main .scroll_box img:hover {
+  width: 100%;
+}
+body main .scroll_box img.link {
+  cursor: url('../img/link_cursor.png'), auto;
+}
+body main .prev_btn {
+  position: absolute;
+  left: 50px;
+  width: 30px;
+}
+@media (max-width: 768px) {
+  body main .prev_btn {
+    left: calc(50% - 40px);
+    bottom: 2vh;
+    width: 20px;
+  }
+}
+body main .next_btn {
+  position: absolute;
+  right: 50px;
+  width: 30px;
+}
+@media (max-width: 768px) {
+  body main .next_btn {
+    right: calc(50% - 40px);
+    bottom: 2vh;
+    width: 20px;
+  }
+}
+body footer {
+  height: 21vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+@media (max-width: 768px) {
+  body footer {
+    height: 26vh;
+  }
+}
+body footer .title {
+  font-weight: 700;
+  font-size: 65px;
+  font-weight: 400;
+  font-size: 40px;
+  font-family: 'Libre Baskerville';
+  font-style: normal;
+  margin-top: 13px;
+}
+@media (max-width: 768px) {
+  body footer .title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+body footer .back {
+  font-family: 'netflix';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 33px;
+  position: absolute;
+  left: 30px;
+  bottom: 40px;
+  display: none;
+}
+@media (max-width: 768px) {
+  body footer .back {
+    display: unset;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+body footer .text_box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 13px;
+}
+body footer .text_box .english_name {
+  font-family: 'netflix';
+  font-style: normal;
+  font-weight: 400;
+}
+body footer .text_box .release_year {
+  font-family: 'netflix';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+}
+body footer .text_box .preference {
+  font-family: 'netflix';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.title_section span {
+  display: inline-block;
+  opacity: 0;
+  animation: scaleAnimation 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.menu_section span {
+  display: inline-block;
+  opacity: 0;
+  animation: scaleAnimation2 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+    forwards;
+}
+
+.top_section span {
+  display: inline-block;
+  opacity: 0;
+  animation: scaleAnimation2 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+    forwards;
+}
+
+.mainTxt_1 {
+  font-family: 'netflix', serif;
+  font-weight: 100;
+  font-size: 30px;
+}
+
+.mainTxt_2 {
+  font-family: 'netflix', serif;
+  font-weight: 100;
+  font-size: 30px;
+  animation-delay: 20ms !important;
+}
+
+.mainTxt_3 {
+  font-family: 'netflix', serif;
+  font-weight: 100;
+  font-size: 30px;
+  animation-delay: 40ms !important;
+}
+
+.mainTxt_4 {
+  font-family: 'netflix', serif;
+  font-weight: 100;
+  font-size: 30px;
+  animation-delay: 60ms !important;
+}
+
+.mainTxt_5 {
+  font-family: 'netflix', serif;
+  font-weight: 100;
+  font-size: 30px;
+  animation-delay: 80ms !important;
+}
+
+.delay_1 {
+  font-family: 'Akaya Telivigala', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+  animation-delay: 300ms !important;
+}
+
+.delay_2 {
+  font-family: 'Akaya Telivigala', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+  animation-delay: 400ms !important;
+}
+
+.delay_3 {
+  font-family: 'Akaya Telivigala', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+  animation-delay: 500ms !important;
+}
+
+.delay_4 {
+  font-family: 'Akaya Telivigala', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+  animation-delay: 600ms !important;
+}
+
+@media (max-width: 768px) {
+  .mobile {
+    display: unset;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
