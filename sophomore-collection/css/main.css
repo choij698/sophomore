@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* header */
+header {
+  display: flex;
+  padding: 1vw 6vw;
+  justify-content: space-between;
+  background-color: white;
+  top: 0;
+  width: 100vw;
+}
+
+h1 {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 38px;
+  font-weight: 400;
+
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 400;
+
+  /* margin-right: 50px; */
+}
+
+h4 {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: black;
+}
+
+a.active {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+}
+
+/* main */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 10vw;
+  gap: 5vw;
+}
+
+.work img {
+  width: 100%;
+}
+
+h5 {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.interior-tilte {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+p {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* periodic table & exhibition */
+.image-container-typo {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.image-description-typo {
+  margin-left: 1rem;
+  flex: 1;
+}
+
+.interior_img1 {
+  width: 400px;
+}
+.interior_img2 {
+  height: 600px;
+}
+
+
+/* stories as networks & elastic collection */
+.image-container-int {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.interior_img3 {
+  width: 1000px;
+}
+.interior_img4 {
+  width: 1000px;
+}
+
+
+/* exhibition */
+.exhibition-wrap {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 30px;
+}
+
+.image {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.description {
+  flex: 2;
+}
+
+hr {
+  height: 1.5px;
+  border: 0;
+  background-color: #D9D9D9;
+  margin: 5vw 0;
+}
