@@ -66,17 +66,41 @@ main {
   gap: 5vw;
 }
 
-.work img {
-  width: 100%;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(200px, auto);
+  grid-gap: 30px;
 }
 
-h5 {
-  font-family: 'Urbanist', sans-serif;
-  font-size: 20px;
-  font-weight: 700;
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 20px;
+}
 
-  margin-top: 10px;
-  margin-bottom: 30px;
+.grid-item img {
+  width: 100%;
+  height: auto;
+}
+
+.grid-item-last {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 20px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.grid-item-last img {
+  width: 100%;
+  height: auto;
 }
 
 .interior-tilte {
