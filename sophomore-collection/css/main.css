@@ -103,6 +103,24 @@ main {
   height: auto;
 }
 
+.grid-item h5 {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.grid-item-last h5 {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+
+  margin-top: 5px;
+  margin-bottom: 35px;
+}
+
 .interior-tilte {
   font-family: 'Urbanist', sans-serif;
   font-size: 20px;
