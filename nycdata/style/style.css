@@ -25,6 +25,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+body.minimum .level .select .minimum, body.medium .level .select .medium, body.maximum .level .select .maximum {
+  font-size: 18px;
+}
 body .title {
   display: flex;
   flex-direction: column;
@@ -51,13 +54,18 @@ body .level .select {
   padding-left: 14px;
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 20px;
   font-weight: 400;
   font-size: 16px;
+  line-height: 18px;
   margin-left: 7px;
 }
 body .level .select div {
   cursor: pointer;
+  width: 150px;
+}
+body .level .select div:hover {
+  font-size: 18px;
 }
 body .status {
   border-bottom: 1px solid #ffffff;
@@ -177,7 +185,7 @@ body .content .desc .text {
   height: 40px;
 }
 
-@media (min-width: 1921px) {
+@media (min-width: 2000px) {
   body .title h1 {
     font-size: 50px;
   }
@@ -193,10 +201,10 @@ body .content .desc .text {
     margin: 0 11vw;
   }
   body .content {
-    transform: scale(1.3);
+    transform: scale(1.2);
   }
 }
-@media (max-width: 1440px) {
+@media (max-width: 1600px) {
   body {
     padding: 30px 20px;
   }
@@ -207,9 +215,9 @@ body .content .desc .text {
     font-size: 24px;
   }
   body .level {
-    transform: scale(0.7);
+    transform: scale(0.9);
     position: relative;
-    left: -14vw;
+    left: -4vw;
   }
   body .status .range {
     transform: scale(0.7);
@@ -227,25 +235,24 @@ body .content .desc .text {
     transform: scale(0.7);
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   body {
     padding: 30px 0;
   }
-  body .title {
+  body > .title {
     padding-left: 20px;
   }
-  body .title h1 {
+  body > .title h1 {
     font-size: 24px;
   }
-  body .title h2 {
+  body > .title h2 {
     font-size: 20px;
   }
   body .level {
-    left: -12vw;
-    top: -18vh;
-  }
-  body .status {
-    min-width: 585px;
+    transform: scale(0.7);
+    position: absolute;
+    top: 60px;
+    left: -5px;
   }
   body .content {
     transform: scale(0.5);
@@ -260,11 +267,21 @@ body .content .desc .text {
   }
   body .status .range {
     transform: scale(0.5);
-    left: -15vw;
+    position: fixed;
+    bottom: 10px;
+    left: -60px;
   }
   body .status .avg {
-    transform: scale(0.5);
-    left: -40vw;
+    transform: scale(0.8);
+    padding: 10px 8px;
+    font-size: 10px;
+    margin-bottom: 45px;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+  }
+  body .status .avg .title {
+    font-size: 12px;
   }
   body .content {
     transform: scale(0.4);
@@ -272,11 +289,3 @@ body .content .desc .text {
 }
 
 /*# sourceMappingURL=style.css.map */
-
-.minimum:hover, .medium:hover, .maximum:hover {
-  font-size: 18px;
-}
-
-.minimum:active {
-  font-size: 18px;
-}

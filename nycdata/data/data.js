@@ -937,7 +937,7 @@ export const datas = [
         custody_level: 'minimum',
         size: 2,
         degree: 0,
-        css_position: 1,
+        css_position: 0,
         infraction_rate_per: 22.2,
         total_inmates: 18,
         inmates_y: 4,
