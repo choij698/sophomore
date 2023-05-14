@@ -200,9 +200,9 @@ function insertMoodCategory() {
 function switchTitle(state) {
   _key = 0;
   if (state === 'spoiler') {
-    document.body.style = "cursor: url('../img/spoiler-cursor.png'), auto;";
+    document.body.style = "cursor: url('./img/spoiler-cursor.png'), auto;";
   } else {
-    document.body.style = "cursor: url('../img/cursor.png'), auto;";
+    document.body.style = "cursor: url('./img/cursor.png'), auto;";
   }
   switch (state) {
     case 'home':
