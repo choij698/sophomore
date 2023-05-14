@@ -57,8 +57,8 @@ body .top_info .title h2 {
 }
 body .top_info .notice {
   border: 1px solid #fff;
-  font-weight: 700;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 16px;
   padding: 25px 20px;
   max-width: 360px;
 }
@@ -220,7 +220,7 @@ body .content .guide {
   align-items: center;
   justify-content: center;
   padding-top: 10px;
-  animation: blink 0.7s ease-in-out;
+  animation: blink 2s cubic-bezier(.17,.67,.83,.67) infinite;
 }
 
 @media (min-width: 2000px) {
@@ -231,7 +231,7 @@ body .content .guide {
     font-size: 40px;
   }
   body .top_info .notice {
-    font-size: 20px;
+    font-size: 16px;
     padding: 30px 25px;
     max-width: 400px;
   }
