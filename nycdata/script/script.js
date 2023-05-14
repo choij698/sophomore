@@ -134,7 +134,7 @@ const refresh = (level = '') => {
   const $guide = document.createElement('div');
   $guide.className = 'guide';
   $guide.innerHTML = `
-      Hover over the circles<br>to view the rate of rule violations<br> per crime
+      Hover over the circles<br>to view the rate of rule violations per crime
     `;
   $content.appendChild($guide);
   document.body.appendChild($content);
