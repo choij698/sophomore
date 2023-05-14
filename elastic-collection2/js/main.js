@@ -48,7 +48,10 @@ const moods = {
   'BE CREATIVE': 'want to be creative',
 };
 // 스포일러 array ! ! ! !  !! ! ! ! !
-const spoilers = [1, 2, 9, 11, 14, 16, 17, 18, 19, 21, 22, 23, 24, 25, 26, 27, 28, 32, 33, 35, 40, 42, 43, 47, 49];
+const spoilers = [
+  1, 2, 9, 11, 14, 16, 17, 18, 19, 21, 22, 23, 24, 25, 26, 27, 28, 32, 33, 35,
+  40, 42, 43, 47, 49,
+];
 let _state = 'home';
 switchTitle(_state);
 
@@ -196,6 +199,11 @@ function insertMoodCategory() {
 
 function switchTitle(state) {
   _key = 0;
+  if (state === 'spoiler') {
+    document.body.style = "cursor: url('../img/spoiler-cursor.png'), auto;";
+  } else {
+    document.body.style = "cursor: url('../img/cursor.png'), auto;";
+  }
   switch (state) {
     case 'home':
       document.querySelector('.content').innerHTML = `

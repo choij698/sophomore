@@ -76,7 +76,8 @@ body {
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  cursor: url('../img/cursor.png'), auto;
+  /* js에서 바꿔줌 */
+  /* cursor: url('../img/cursor.png'), auto; */
   background-image: url('../img/background.png');
   background-size: cover;
   background-position: center;

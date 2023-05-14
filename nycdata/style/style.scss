@@ -1,3 +1,15 @@
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -31,18 +43,31 @@ body {
     font-size: 18px;
   }
 
-  .title {
+  .top_info {
     display: flex;
-    flex-direction: column;
-    font-weight: 400;
-    font-style: normal;
+    justify-content: space-between;
 
-    h1 {
-      font-size: 38px;
+    .title {
+      display: flex;
+      flex-direction: column;
+      font-weight: 400;
+      font-style: normal;
+
+      h1 {
+        font-size: 38px;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
     }
 
-    h2 {
-      font-size: 30px;
+    .notice {
+      border: 1px solid #fff;
+      font-weight: 700;
+      font-size: 18px;
+      padding: 25px 20px;
+      max-width: 360px;
     }
   }
 
@@ -84,21 +109,21 @@ body {
     justify-content: space-between;
 
     .range {
-      margin-bottom: 14px;
+      margin-bottom: 21px;
       margin-top: auto;
 
       .title {
         font-weight: 700;
-        font-size: 16px;
+        font-size: 24px;
         border-bottom: 1px solid #ffffff;
-        padding-bottom: 3px;
+        padding-bottom: 5px;
         display: inline;
       }
 
       .circles {
         display: flex;
         text-align: center;
-        margin-top: 15px;
+        margin-top: 22px;
 
         .circle {
           margin-top: auto;
@@ -109,8 +134,8 @@ body {
 
           .num {
             font-weight: 300;
-            font-size: 12px;
-            margin-top: 5px;
+            font-size: 18px;
+            margin-top: 7px;
           }
         }
 
@@ -134,7 +159,7 @@ body {
       font-weight: 400;
       font-size: 16px;
       padding: 25px 20px;
-      margin-bottom: 17px;
+      margin-bottom: 30px;
 
       .title {
         font-weight: 700;
@@ -214,18 +239,44 @@ body {
         height: 40px;
       }
     }
+
+    .guide {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+      width: 230px;
+      height: 230px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 10px;
+
+      animation: blink 0.7s ease-in-out;
+    }
   }
 }
 
 @media (min-width: 2000px) {
   body {
-    .title {
-      h1 {
-        font-size: 50px;
+    .top_info {
+      .title {
+        h1 {
+          font-size: 50px;
+        }
+
+        h2 {
+          font-size: 40px;
+        }
       }
 
-      h2 {
-        font-size: 40px;
+      .notice {
+        font-size: 20px;
+        padding: 30px 25px;
+        max-width: 400px;
       }
     }
 
@@ -249,13 +300,21 @@ body {
   body {
     padding: 30px 20px;
 
-    .title {
-      h1 {
-        font-size: 30px;
+    .top_info {
+      .title {
+        h1 {
+          font-size: 30px;
+        }
+
+        h2 {
+          font-size: 24px;
+        }
       }
 
-      h2 {
-        font-size: 24px;
+      .notice {
+        font-size: 16px;
+        padding: 20px 15px;
+        max-width: 300px;
       }
     }
 
@@ -291,15 +350,25 @@ body {
   body {
     padding: 30px 0;
 
-    > .title {
-      padding-left: 20px;
+    .top_info {
+      padding: 0 20px;
 
-      h1 {
-        font-size: 24px;
+      .title {
+        h1 {
+          font-size: 24px;
+        }
+
+        h2 {
+          font-size: 20px;
+        }
       }
 
-      h2 {
-        font-size: 20px;
+      .notice {
+        border: 0.5px solid #fff;
+
+        font-size: 14px;
+        padding: 15px 10px;
+        max-width: 260px;
       }
     }
 
@@ -316,15 +385,23 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   body {
-    .title {
-      h1 {
-        font-size: 20px;
+    .top_info {
+      .title {
+        h1 {
+          font-size: 20px;
+        }
+
+        h2 {
+          font-size: 16px;
+        }
       }
 
-      h2 {
-        font-size: 16px;
+      .notice {
+        font-size: 10px;
+        padding: 10px 7px;
+        max-width: 109px;
       }
     }
 
@@ -332,15 +409,15 @@ body {
       .range {
         transform: scale(0.5);
         position: fixed;
-        bottom: 10px;
-        left: -60px;
+        bottom: -10px;
+        left: -75px;
       }
 
       .avg {
         transform: scale(0.8);
         padding: 10px 8px;
         font-size: 10px;
-        margin-bottom: 45px;
+        margin-bottom: 40px;
         position: fixed;
         bottom: 0px;
         right: 0px;

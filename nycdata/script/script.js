@@ -31,6 +31,7 @@ const refresh = (level = '') => {
   if ($prevContent) {
     $prevContent.remove();
   }
+
   const $content = document.createElement('div');
   $content.className = 'content';
   datas.forEach((data, index) => {
@@ -51,6 +52,10 @@ const refresh = (level = '') => {
       $bubble.style.right = `${bubble.css_position}px`;
       if (!isOff) {
         $bubble.onmouseover = () => {
+          const $guide = document.querySelector('.guide');
+          if ($guide) {
+            $guide.remove();
+          }
           const $prevDesc = document.querySelector('.desc');
           if ($prevDesc) {
             $prevDesc.remove();
@@ -126,7 +131,12 @@ const refresh = (level = '') => {
       break;
   }
   document.querySelector('.status').appendChild($avg);
-
+  const $guide = document.createElement('div');
+  $guide.className = 'guide';
+  $guide.innerHTML = `
+      Hover over to any circles<br>to see rule violation rate<br> per crime
+    `;
+  $content.appendChild($guide);
   document.body.appendChild($content);
 };
 
